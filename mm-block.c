@@ -20,6 +20,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
+#define _XOPEN_SOURCE
+
 /* assert */
 #include <assert.h>
 
@@ -47,6 +49,8 @@ THE SOFTWARE.
 #define C(r,c) C[ROWMJR(r,c,n,p)]
 
 #define min(x,y) ((x)<(y)?(x):(y))
+
+extern int optind;
 
 static void
 S_matload(char const * const filename, size_t * const np, size_t * const mp,
